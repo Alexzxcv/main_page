@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px "Fuzzy Bubbles", sans-serif;
+  color: black;
+  font-weight: 600;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  user-select: none;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url(/img/fon.jpg) no-repeat center;
+  background-size: cover;
+  animation: anim_bg 20s forwards;
+}
+@keyframes anim_bg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.main-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-height: 700px;
+  max-width: 500px;
+  min-width: 400px;
+  min-height: 600px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.main-page__photo img {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.main-page__name {
+  font-size: 30px;
+}
+.main-page__prof {
+  font-size: 20px;
+}
+.main-page__locate {
+  font-size: 20px;
+}
+.main-page__locate img {
+  width: 15px;
+  height: 15px;
+}
+.main-page__info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.main-page__info > div {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.main-page__info > div > *:first-child {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.main-page__info > div > *:last-child {
+  font-weight: 600;
+  opacity: 0.7;
+}
+.main-page__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.main-page__contacts .vk,
+.main-page__contacts .inst,
+.main-page__contacts .github {
+  width: 50px;
+  height: 50px;
+  transition-duration: 0.3s;
+  background: white;
+  border-radius: 15px;
+}
+.main-page__contacts .vk:hover,
+.main-page__contacts .inst:hover,
+.main-page__contacts .github:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px black;
+}
+.main-page__contacts .google img {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+.main-page__contacts .google img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px black;
+}
+
+/*# sourceMappingURL=style.css.map */
